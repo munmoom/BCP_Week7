@@ -3,9 +3,9 @@
   "nbformat_minor": 0,
   "metadata": {
     "colab": {
-      "name": "Untitled33.ipynb",
+      "name": "2-202255127.py",
       "provenance": [],
-      "authorship_tag": "ABX9TyOcQWjxmM7twWzyrJsnC7ZP",
+      "authorship_tag": "ABX9TyNaR/hkB7Dho/vfa2P3nmLk",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -29,22 +29,49 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "qVb8Woy37prv"
-      },
-      "outputs": [],
       "source": [
-        "def merge(a,b):\n",
-        "  F = open('/content/b', 'w')\n",
-        "  i=0\n",
-        "  num=len(a)\n",
-        "  for i in range(0,num):\n",
-        "    f = open(f\"/content/{a[i]}\",'r')\n",
-        "    F.write(f.read())\n",
-        "    i += 1\n",
-        "    f.close()\n",
-        "  F.close()"
+        "t = list()\n",
+        "while True:\n",
+        "  add = float(input())\n",
+        "  if add == 999:\n",
+        "    break\n",
+        "  else:\n",
+        "    t.append(add)\n",
+        "\n",
+        "num = len(t)\n",
+        "\n",
+        "T = 0\n",
+        "for i in t:\n",
+        "  if T == 0:\n",
+        "     T = i\n",
+        "     continue\n",
+        "  else:\n",
+        "    result = i-T\n",
+        "    result2 = round(result,2)\n",
+        "    print(result2, end=' ')\n",
+        "    T = i"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rWn12PtFjCsB",
+        "outputId": "47f996d6-d08f-472d-aaf2-ebfafab7e144"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10.0\n",
+            "12.05\n",
+            "30.25\n",
+            "20\n",
+            "999\n",
+            "2.05 18.2 -10.25 "
+          ]
+        }
       ]
     }
   ]
